@@ -1,4 +1,4 @@
-import Abhay.*;
+import Sanjay.*;
 class CallPackage
 {
 	public static void main(String args[])
