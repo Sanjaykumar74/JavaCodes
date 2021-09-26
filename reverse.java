@@ -1,18 +1,21 @@
-import java.util.*;
+import java.util.Scanner;
 class reverse
 {
-	public static void main(String ars[])
-	{
-	  Scanner s1=new Scanner(System.in);
-	  int i,rem,n,sum=0;
-	  System.out.println("Enter number ");
-	  n=s1.nextInt();
-	  for(i=n;i>0;i=i/10)
-	  {
-	  	rem=i%10;
-	  	sum=(sum*10)+rem;
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter a five digit no:");
+int a=sc.nextInt();
+int d1 = a%10;
+a = a/10;
+int d2 =a%10;
+a =a/10;
+int d3 =a%10;
+a =a/10;
+int d4 =a%10;
+a =a/10;
+int d5 =a%10;
 
-	  }
-	  System.out.println(sum);
-	}
+System.out.println("New no after reversing digits: "+d1+d2+d3+d4+d5);
+}
 }
