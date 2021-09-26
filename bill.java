@@ -1,38 +1,52 @@
 import java.util.*;
 class bill
 {
-	public static void main(String args[])
-	{
-	Scanner s1=new Scanner(System.in);
-	int price=0,qty,totalbill,n;
-	System.out.println("customer menu");
-	System.out.println("press 1 for pizza");
-	System.out.println("press 2 for burger");
-	System.out.println("press 3 for noodles");
-	System.out.println("press 4 for hot dogs");
-	System.out.println("enter your choice");
-	n=s1.nextInt();
-	switch(n)
-	{
-		case 1:
-			price=5;
-			break;
-		case 2:
-		     price=7;
-		    break;
-		case 3:
-		     price=4;
-		    break;
-		case 4:
-		     price=9;
-		    break;
-		default:
-			System.out.println("invalid input");
-	}//end of switch
-	System.out.println("The Price = "+price+"$");
-	System.out.println("Enter Number of items to order: ");
-	qty=s1.nextInt();
-	totalbill=qty*price;
-   System.out.println("Your Total Bill = "+totalbill +"$");	
-	}//end of main
-}//end of class
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the metre no.:");
+int metre=sc.nextInt();
+System.out.println("Enter the last metre reading:");
+int last=sc.nextInt();
+System.out.println("Enter the current metre reading:");
+int current=sc.nextInt();
+int UC=current-last;
+System.out.println("Calculate the unit consumed:"+UC);
+if(UC<=250)
+{
+System.out.println("Rate of per unit is 4:");
+int bill=(UC*4);
+System.out.println("Calculate the bill:"+bill);
+} 
+else if (UC>250 && UC<=500)
+{
+System.out.println("Rate of per unit is 6:");
+int bill=((UC-250)*6)+(250*4);
+System.out.println("Calculate the bill:"+bill);
+}
+else if(UC>500 && UC<=1000)
+{
+System.out.println("Rate of per unit is 8:");
+int bill=((UC-500)*8)+(250*6)+(250*4);
+System.out.println("Calculate the bill:"+bill);
+} 
+else if(UC>1000 && UC<=1800)
+{
+System.out.println("Rate of per unit is 12:");
+int bill=((UC-1000)*12)+(500*8)+(250*6)+(250*4);
+System.out.println("Calculate the bill:"+bill);
+} 
+else if(UC>1800 && UC<=3000)
+{
+System.out.println("Rate of per unit is 18:");
+int bill=((UC-1800)*18)+(800*12)+(500*8)+(250*6)+(250*4);
+System.out.println("Calculate the bill:"+bill);
+} 
+else 
+{
+System.out.println("Rate of per unit is 20:");
+int bill=((UC-3000)*20)+(1200*18)+(800*12)+(500*8)+(250*6)+(250*4);
+System.out.println("Calculate the bill:"+bill);
+} 
+}
+}      
